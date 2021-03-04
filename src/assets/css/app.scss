@@ -1,0 +1,321 @@
+/** @format */
+
+@import "./variables.scss";
+@import "~element-ui/packages/theme-chalk/src/index";
+
+//全局样式
+.el-button--danger.is-plain {
+	//按钮样式修改
+	background-color: rgba(0, 0, 0, 0);
+	border: 1px solid #f74a4a;
+}
+.el-button--primary.is-plain {
+	//按钮样式修改
+	background-color: rgba(0, 0, 0, 0);
+	border: 1px solid #0071e3;
+}
+.el-button--primary.is-plain:hover {
+	//按钮样式修改
+	color: #fff;
+}
+.v-modal {
+	//遮罩层样式
+	background: #4d4d4d;
+}
+
+// el-input theme
+.el-input__inner,
+.el-textarea__inner {
+	background: rgba(0, 0, 0, 0.2);
+	border-color: #4d4d4d;
+	color: #fff;
+	font-family: inherit;
+	border-radius: 0;
+	&:focus {
+		border-color: #c0c4cc;
+	}
+}
+.el-input.is-disabled .el-input__inner {
+	background: rgba(255, 255, 255, 0.2);
+	color: #fff;
+	border-color: #4d4d4d;
+}
+// el-select theme
+.el-select {
+	.el-input__inner:focus {
+		border-color: #c0c4cc;
+	}
+	.el-input.is-focus .el-input__inner {
+		border-color: #c0c4cc;
+	}
+}
+
+/* ---select下拉样式 ---*/
+.el-select-dropdown {
+	background-color: rgba($color: #000000, $alpha: 1);
+	.el-select-dropdown__item {
+		background-color: rgba($color: #000000, $alpha: 1);
+		&:hover {
+			color: #fff;
+		}
+	}
+}
+.el-popper[x-placement^="bottom"] .popper__arrow::after {
+	border-bottom-color: rgba($color: #000000, $alpha: 1);
+}
+// el-picker
+.el-picker-panel,
+.el-date-table th,
+.el-picker-panel__icon-btn {
+	color: #a0a0a0;
+	background: #000;
+}
+
+/* --- 分页 ---*/
+.el-pagination {
+	.el-pagination__total {
+		color: #fff;
+	}
+	.el-pagination__jump {
+		color: #fff;
+	}
+	.el-input__inner {
+		background-color: rgba(255, 255, 255, 0.1);
+		border: 1px solid #999999;
+		color: #e6e6e6;
+	}
+	.btn-prev,
+	.btn-next,
+	.el-pager .number,
+	.el-pager .more {
+		background-color: rgba(255, 255, 255, 0.2);
+		color: #fff;
+	}
+	&.is-background {
+		.btn-prev,
+		.btn-next,
+		.el-pager .number,
+		.el-pager .more {
+			background-color: rgba(255, 255, 255, 0.2);
+			color: #fff;
+		}
+	}
+}
+
+// 表单样式修改
+.dark-form {
+	.el-select {
+		.el-input {
+			.el-input__suffix {
+				border: none;
+				width: 30px;
+				right: 0;
+				padding: 0;
+				background: linear-gradient(
+					90deg,
+					rgba(255, 255, 255, 0.1) 0%,
+					rgba(255, 255, 255, 0) 100%
+				);
+				.el-input__suffix-inner {
+					width: 100%;
+					display: block;
+					height: 100%;
+					.el-input__icon {
+						width: 100%;
+						height: 100%;
+						line-height: 30px;
+						color: #0071e3;
+					}
+				}
+			}
+		}
+	}
+	.el-textarea {
+		background-color: rgba(255, 255, 255, 0.1);
+	}
+	.el-input {
+		background-color: rgba(255, 255, 255, 0.1);
+		.el-input-group__prepend {
+			background: rgba(0, 0, 0, 0.2);
+			border: none;
+			border-radius: 0px;
+			min-width: 97px;
+			border: 1px solid #4d4d4d;
+			border-right: none;
+			.el-input {
+				background-color: rgba(0, 0, 0, 0);
+			}
+			div.el-select .el-input__inner {
+				padding-left: 10px;
+				padding-right: 20px;
+			}
+			.el-input__suffix {
+				background: none;
+				width: 20px;
+			}
+			.el-input__inner {
+				color: #fff;
+			}
+		}
+		.el-input-group__append {
+			padding: 0;
+			padding-top: 0;
+			width: 32px;
+			border-radius: 0px;
+			border: 1px solid #4d4d4d;
+			border-left: none;
+			background: linear-gradient(
+				90deg,
+				rgba(255, 255, 255, 0.1) 0%,
+				rgba(255, 255, 255, 0) 100%
+			);
+			.el-button {
+				padding: 0;
+				margin: 0;
+				width: 32px;
+				min-height: 30px;
+				border-radius: 0px;
+			}
+		}
+	}
+	.el-upload--picture-card,
+	.el-upload-list--picture-card .el-upload-list__item {
+		background-color: rgba(0, 0, 0, 0);
+		border-radius: 0px;
+		border-color: #0071e3;
+		width: 74px;
+		height: 74px;
+	}
+	.el-upload--picture-card {
+		line-height: 80px;
+	}
+}
+
+.el-popover {
+	background: #000000;
+	border-color: #4d4d4d;
+	.popper__arrow {
+		border-right-color: #4d4d4d !important;
+		&::after {
+			border-right-color: #4d4d4d !important;
+		}
+	}
+}
+
+//table
+.el-table {
+	background: rgba(26, 26, 26, 0.8);
+	color: #ffffff !important;
+	th {
+		padding: 6px 0px;
+	}
+	tr {
+		background-color: transparent;
+		color: #e6e6e6;
+	}
+	.el-table__row {
+		&:hover {
+			background-color: #000000;
+		}
+	}
+	tr:last-child {
+		border-bottom: none;
+	}
+	th,
+	th .el-table-column--selection {
+		background: rgba(255, 255, 255, 0.1);
+		color: #fff;
+		&:hover {
+			background-color: rgba(255, 255, 255, 0.1);
+		}
+	}
+	td,
+	th {
+		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	}
+}
+.el-table--enable-row-hover .el-table__body tr:hover > td {
+	background-color: #000000;
+}
+// 滚动条样式冲突了，不要随便复制代码到全局！！！
+// .el-table--scrollable-y .el-table__body-wrapper::-webkit-scrollbar {
+//   width: 0px;
+// }
+.el-table__fixed-right-patch {
+	width: 0px !important;
+}
+//checkbox
+.el-checkbox__inner {
+	background-color: transparent;
+}
+
+//tree
+.el-tree {
+	background: rgba(26, 26, 26, 0.8);
+	.el-tree-node__content {
+		&:hover {
+			background-color: rgba(26, 26, 26, 0.8);
+		}
+	}
+	.el-tree-node:focus > .el-tree-node__content {
+		background-color: rgba(26, 26, 26, 0.8);
+	}
+	.el-tree-node__label {
+		color: #fff;
+	}
+}
+
+//时间
+.el-range-input {
+	background-color: transparent !important;
+}
+.el-range-editor--mini .el-range-separator {
+	color: #fff;
+	width: 21px;
+}
+.el-picker-panel__footer {
+	background-color: rgba(26, 26, 26, 0.8);
+}
+
+//多级联动
+.el-cascader__dropdown {
+	background-color: #000;
+}
+.el-cascader-node,
+.is-selectable {
+	&:hover {
+		background-color: #000;
+	}
+}
+
+//消息
+.el-message-box {
+	background-color: rgba(26, 26, 26, 0.8);
+	.el-message-box__title,
+	.el-message-box__message {
+		color: #fff;
+	}
+}
+
+//联级选择器多选内部输入框
+.el-cascader__search-input {
+	background-color: rgba(0, 0, 0, 0);
+}
+.el-cascader-node:not(.is-disabled):focus,
+.el-cascader-node:not(.is-disabled):hover {
+	background-color: rgba(255, 255, 255, 0.3);
+}
+.el-cascader__tags {
+	align-items: center;
+}
+.el-cascader-node {
+	color: #fff;
+}
+.el-cascader__tags .el-tag {
+	background: rgba(255, 255, 255, 0.3);
+	color: #fff;
+}
+
+.el-divider {
+	background-color: hsla(0, 0%, 100%, 0.2);
+}

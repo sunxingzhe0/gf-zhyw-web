@@ -1,0 +1,32 @@
+.apply-main {
+	height: calc(100% - 88px);
+	.header-query {
+		padding: 10px 20px;
+		padding-right: 25px;
+		.input-with-select {
+			width: 260px;
+			.el-input-group__append {
+				width: 26px !important;
+				color: #0071e3;
+				background: transparent;
+				border-color: #4d4d4d;
+				padding: 0px;
+				.el-button {
+					margin: 0;
+					width: 100%;
+					height: 100%;
+					padding: 0;
+				}
+			}
+			.el-input-group__prepend {
+				width: 100px !important;
+				color: #0071e3;
+				background: transparent;
+				border-color: #4d4d4d;
+			}
+		}
+		.addbtn {
+			float: right;
+		}
+	}
+}
